@@ -1,0 +1,3 @@
+name:jiwon oh
+major:컴퓨터 공학과
+number:2015136077
