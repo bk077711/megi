@@ -3,7 +3,7 @@ Markdown
 ...my name is *jiwon oh*
 number is **2015136077**
 my major is **컴퓨터공학**
-mt favorite game is [naver]
+my favorite game is [naver]
 [1]
 ![naver](http://some-url.com/a.png)
 >phone kind
