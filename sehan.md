@@ -12,10 +12,10 @@ koreatech 컴퓨터공학부에 재학중인 학생의 소개
 
 [koreatech으로 갑니다][학교홈페이지]
 [학교홈페이지]:https://koreatech.ac.kr/
-![학교심볼](https://blogfiles.naver.net/20160530_90/ohsehan96_1464600146643jhLrW_GIF/kut_logo.gif)
+![학교심볼](https://postfiles9.naver.net/20160530_24/ohsehan96_1464600506771Rz10w_GIF/kut_logo.gif?type=w2)
 `코드이다. [test](https://test.com)`
 | a | b | c | d |
-| : --- : | :---: | :---: | :---: |
+| ---
 | 오세한 | 오세한 | 오세한 | 오세한 |
-| ㅇ | ㅇ | ㅇ | ㅇ |
+| 대전 | 누리 | 104 | 1106 |
 
