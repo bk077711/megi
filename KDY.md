@@ -15,7 +15,7 @@
 
 <pre>
 <code>
-Blizzard is game company
+*Blizzard is game company*
 	This is Game
 game of blizzard
 </code>
