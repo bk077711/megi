@@ -1,10 +1,11 @@
 #Blizzard
-+*starcraft2*<br>
-+*diablo3*<br>
-+_hearthstone_<br>
-+_overwatch_<br>
+* starcraft2<br>
+* diablo3<br>
+1.**hearthstone**<br>
+2.**overwatch**<br>
 
 >diablo3 _26000Won_
+<br>
 >overwatch _45000won_
 
 [blizzard](kr.blizzard.com)
