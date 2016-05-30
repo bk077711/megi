@@ -1,4 +1,4 @@
-#*Blizzard*
+#Blizzard
 *starcraft2<br>
 *diablo3<br>
 1.**hearthstone**<br>
