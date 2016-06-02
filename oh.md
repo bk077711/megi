@@ -12,5 +12,16 @@ my favorite game is [naver]
 3.3g phone
 4.slide phone
 
+|  a  d  |  m i d |
+|:------:|:------:|
+| draven | victor |
+| rucian | z e d  |
+
+
+'''python
+s="jiwon is genius"
+print s
+'''
+
 [1]: http://naver.com
 
