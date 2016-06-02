@@ -18,10 +18,7 @@ my favorite game is [naver]
 | rucian | z e d  |
 
 
-'''python
-s="jiwon is genius"
-print s
-'''
+`i don't know exactly what is code. enter the [naver](http://naver.com)`
 
 [1]: http://naver.com
 
