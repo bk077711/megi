@@ -44,3 +44,128 @@
 3.[APP}으로 정보 전송 및 게시
 4.[사용자]가 [App]이나 [서버]에서 세탁기 정보 열람
 
+
+
+
+시스템 기능 2를 수행하는 시스템 동작 흐름
+ 1. [진동감지모듈]을 통해 진동을 감지해 세탁기 사용 여부를 확인한다.
+ 2. [카메라]로부터 영상을 전송 받는다
+ 3. [컴퓨터] 영상 처리 모듈에서 영상을 처리 후 [서버]로 전송한다.
+ 4. [서버]에서 세탁기 정보를 게시하고, [App]으로 정보를 전송한다.
+ 5. [사용자]가 [App]과 [서버]를 통해 세탁기 정보를 확인한다.
+
+
+시스템 기능 3을 수행하는 시스템 동작 흐름
+ 1. 사용자가 [App]으로 알람 요청을 한다.
+ 2. [App]은 [서버]로부터 세탁기 정보를 받는다.
+ 3. [App] 알림모듈이 세탁기 동작이 멈추거나 빈 세탁기가 생기면 [사용자]에게 알림을 준다.
+
+
+
+
+6. 핵심 구성 요소 상세 설계
+ 구성 요소 1 상세 설계
+
+Computer 클래스
+-----------
+private :
++time
++vibration
++camera
+-------------
+public :
+-void control()
+-void push_to_server()
+
+
+#include <iostream>
+
+using namespace std;
+
+class Computer
+{
+private:
+	int time; // 세탁기 남은 시간
+	bool vibration; // 진동감지신호
+	bool camera; // 카메라 작동 여부
+public:
+	Computer(int t = 0, bool v = false, bool c = false) : time(t), vibration(v), camera(c)
+	{
+	}
+	void control() // 카메라 작동 제어
+	{
+		if (vibration == true && camera == false)
+		{
+			camera = true;
+			cout << "카메라 ON" << endl;
+		}
+		if ((vibration == false && time == 0) && camera == true)
+		{
+			camera = false;
+			cout << "카메라 OFF" << endl;
+		}
+	}
+	void push_to_server() // 서버로 영상 전송
+	{
+		cout << "영상정보를 서버로 전송합니다." << endl;
+	}
+};
+
+void main()
+{
+	Computer c1(5, 1, 0), c2(0, 0, 1);
+
+	cout << "남은시간 5분, 진동감지O, 카메라 작동X일때 control 함수" << endl;
+	c1.control();
+	cout << "남은시간 0분, 진동감지X, 카메라 작동O일때 control 함수" << endl;
+	c2.control();
+	c1.push_to_server();
+}
+
+ 구성 요소 2 상세 설계
+
+App 클래스
+private :
++time;
+------------------
+public :
+-push_alram()
+-getDate()
+
+#include <iostream>
+
+using namespace std;
+
+class App
+{
+private :
+	int time;
+public :
+	App(int t = 0) : time(t)
+	{
+	}
+	void push_alram() // 사용자에게 알람을 보냄
+	{
+	 if (time == 0)
+		{
+		cout << "1)사용 가능한 세탁기가 생기면 알람이 울리게 할 경우" << endl;
+		cout << "X층 X번째 세탁기가 현재 사용 가능합니다!" << endl;
+		cout << "2) 특정 세탁기가 사용완료되면 알람이 울리게 설정했을 경우" << endl;
+		cout << "해당 세탁기의 세탁이 완료 되었습니다." << endl;
+		}
+	}
+	void getDate() // 서버로 부터 데이터를 전송받음
+	{
+		cout << "서버로 부터 데이터를 불러왔습니다." << endl;
+	}
+};
+
+void main()
+{
+	App a;
+	a.getDate();
+	a.push_alram();
+}
+
+
+
