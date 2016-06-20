@@ -66,7 +66,7 @@
 6. 핵심 구성 요소 상세 설계
  구성 요소 1 상세 설계
 
-Computer 클래스
+```Computer 클래스
 -----------
 private :
 +time
@@ -167,5 +167,5 @@ void main()
 	a.push_alram();
 }
 
-
+```
 
